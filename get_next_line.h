@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: muyucego <muyucego@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/14 03:34:26 by muyucego          #+#    #+#             */
-/*   Updated: 2023/12/14 03:35:36 by muyucego         ###   ########.fr       */
+/*   Created: 2023/12/17 06:52:06 by muyucego          #+#    #+#             */
+/*   Updated: 2023/12/17 07:09:06 by muyucego         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
-
 # define GET_NEXT_LINE_H
-
-# include <stdlib.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5
 # endif
 
-char	*ft_trimlast(char *str, char c);
-char	*ft_read(int fd, char *str);
+# include <stdlib.h>
+
 char	*get_next_line(int fd);
-char	*ft_new_str(char *str);
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *buffer);
+char	*ft_strjoin(char const *stack, char const *buffer);
+char	*ft_substr(char const *stack, unsigned int start, size_t len);
+void	*ft_clean(char **stack, int create_line);
 
 #endif
